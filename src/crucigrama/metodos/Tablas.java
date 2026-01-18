@@ -113,4 +113,4 @@ public class Tablas {
         System.out.println("║   1  = Número de pista (inicio palabra)                                     ║");
         System.out.println("╚══════════════════════════════════════════════════════════════════════════════╝");
     }
-}
+} 

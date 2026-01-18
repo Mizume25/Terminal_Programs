@@ -12,281 +12,339 @@ public class Pistas {
     // PISTAS PARA NIVEL FÁCIL
     // ==============================
     
-    public static void pistasfacil() {
+    public static void pistasFacilFase1(String [] comodines,int [] posiciones) {
         // Pistas para Nivel 1 (6-7 letras)
-    	String[][] pistas = new String [3][];
-        pistas[0] = new String[] {
+    	String[] pistas;
+        pistas = new String[] {
             "Lugar hogar vivienda", "Mueble patas superficie", "Animal compañero fiel", "Felino doméstico mascota",
             "Astro noche brillante", "Planta color aroma", "Agua salada extensa", "Corriente agua dulce",
-            "Vapor cielo blanco", "Parte árbol verde", "Planta tronco ramas", "Alimento harina horno",
-            "Felino selva melena", "Animal oso hiberna", "Roedor cola larga", "Animal agua branquias",
+            "Vapor cielo blanco", "Parte vegetal verde", "Planta tronco ramas", "Alimento harina horno",
+            "Felino selva melena", "Plantígrado grande hiberna", "Roedor cola larga", "Animal agua branquias",
             "Animal plumas vuela", "Malla pesca captura", "Asiento respaldo patas", "Entrada salida marco",
             "Cristal marco vista", "Vehículo motor ruedas", "Embarcación mar agua", "Aeronave alas motor",
-            "Bicicleta pedales ruedas", "Motocicleta motor rápido", "Círculo giro automóvil", "Vía coches circulación",
+            "Vehículo pedales ruedas", "Vehículo dos ruedas rápido", "Círculo giro automóvil", "Vía coches circulación",
             "Espacio ciudad edificios", "Área verde árboles", "Texto hojas leer", "Instrumento escribir grafito",
             "Material escribir imprimir", "Imagen captura momento", "Grabación imagen sonido", "Sonido ritmo melodía",
             "Movimiento música cuerpo", "Diversión actividad reglas", "Punto deporte anotación", "Objeto redondo jugar",
-            "Espacio plantas flores", "Agua surtidor decorativo", "Marco pintura imagen", "Vocal sonido canción",
-            "Actividad física competencia", "Pase balón compañero", "Disparo objetivo punto", "Raqueta tenis pelota",
-            "Terreno deporte juego", "Persona cercana afecto", "Grupo padres hijos", "Hermano varón familiar",
+            "Espacio plantas flores", "Agua surtidor decorativo", "Marco tela imagen", "Vocal sonido canción",
+            "Actividad física competencia", "Entrega balón compañero", "Disparo objetivo punto", "Instrumento tenis malla",
+            "Terreno deporte juego", "Persona cercana afecto", "Grupo padres hijos", "Varón mismo progenitor",
             "Progenitor masculino familia", "Progenitor femenino familia", "Descendiente varón padres", "Familiar hermano padre",
-            "Familiar hermana madre", "Anciano familia experiencia", "Nieto hijo abuelos", "Centro enseñanza aprendizaje",
+            "Familiar hermana madre", "Anciano familia experiencia", "Hijo de los hijos", "Centro enseñanza aprendizaje",
             "Grupo alumnos materia", "Estudiante pupilo aprender", "Maestro docente enseñar", "Sala clases pupitres",
-            "Patio colegio recreo", "Receso descanso juego", "Prueba evaluación conocimiento", "Calificación resultado examen",
-            "Materia asignatura estudio", "Alimento comer nutrir", "Líquido transparente vital", "Bebida blanca láctea",
-            "Alimento animal proteína", "Alimento planta dulce", "Vegetal hortaliza salud", "Grano cocido alimento",
-            "Pasta italiana spaghetti", "Duración minutos horas", "Unidad tiempo sesenta", "Período luz sol",
-            "Período oscuridad luna", "Período siete días", "Período treinta días", "Período doce meses",
-            "Día mes año específico", "Reloj hora minutos", "Calendario meses días", "Estación frío nieve",
+            "Patio colegio descanso", "Receso descanso juego", "Prueba evaluación conocimiento", "Calificación resultado examen",
+            "Materia asignatura estudio", "Nutriente comer sustento", "Líquido transparente vital", "Bebida blanca nutritiva",
+            "Alimento animal proteína", "Alimento planta dulce", "Hortaliza colorada o verde", "Grano blanco cocido",
+            "Harina italiana cocida", "Duración minutos horas", "Unidad sesenta minutos", "Período luz sol",
+            "Período oscuridad nocturna", "Período siete días", "Período treinta días", "Período doce meses",
+            "Día mes año específico", "Aparato mide minutos", "Lista meses días", "Estación frío nieve",
             "Estación calor sol", "Estación hojas caen", "Estación flores brotan", "Mes primero año",
             "Mes segundo año", "Mes tercero año", "Mes cuarto año", "Mes quinto año",
             "Mes sexto año", "Mes séptimo año", "Mes octavo año", "Mes noveno año"
         };
-        
-        // Pistas para Nivel 2 (7-8 letras)
-        pistas[1] = new String[] {
-            "Aparato imágenes noticias", "Medio comunicación sonido", "Dispositivo llamar hablar", "Teléfono móvil portátil",
-            "Dispositivo pantalla táctil", "Ordenador portátil móvil", "Cuarto cocinar alimentos", "Habitación dormir cama",
-            "Cuarto bañarse lavarse", "Sala reunir sentarse", "Lugar guardar automóvil", "Terraza exterior asiento",
-            "Balcón ventana exterior", "Ascensor subir bajar", "Escalera peldaños subir", "Pasillo corredor conectar",
-            "Centro médico enfermos", "Establecimiento medicamentos", "Profesional salud curar", "Personal enfermería asistir",
-            "Ciencia curar enfermedades", "Película cine actores", "Serie televisión capítulos", "Actor interpreta personaje",
-            "Actriz femenina personaje", "Director película guía", "Guion historia diálogos", "Escena parte película",
-            "Espectadores teatro cine", "Teatro obra actuación", "Pintura colores lienzo", "Dibujo lápiz papel",
-            "Rojo azul amarillo tonalidad", "Pincel pintar brochas", "Lienzo tela pintar", "Galería arte exposiciones",
-            "Museo arte historia", "Arte creatividad expresión", "Artista creador obra", "Obra creación artística",
-            "Establecimiento comprar vender", "Mercado productos puestos", "Supermercado alimentos compra", "Caja dinero cobrar",
-            "Comprador cliente adquirir", "Vendedor comerciante ofrecer", "Precio valor costo", "Oferta descuento precio",
-            "Comprar adquirir pagar", "Vender ofrecer cobrar", "Ordenador procesar datos", "Impresora papel documentos",
-            "Escaner digitalizar imágenes", "Televisor pantalla grande", "Consola videojuegos controles", "Joystick mando jugar",
-            "Volante coche dirección", "Freno detener parar", "Acelerador velocidad motor", "Motor máquina movimiento",
-            "Carrocería chasis automóvil", "Neumático rueda goma", "Gasolina combustible motor", "Diesel combustible pesado",
-            "Eléctrico corriente energía", "Batería acumular energía", "Cargador recargar energía", "Enchufe conexión corriente",
-            "Corriente flujo eléctrico", "Voltaje tensión eléctrica", "Programación código instrucciones", "Algoritmo pasos solución",
-            "Variable valor cambia", "Función cálculo resultado", "Clase objeto plantilla", "Objeto instancia clase",
-            "Método función clase", "Código instrucciones programa", "Compilar traducir código", "Ejecutar correr programa",
-            "Internet red mundial conexión", "Navegador web páginas", "Página web sitio", "Enlace URL dirección",
-            "Buscar encontrar información", "Resultado búsqueda respuesta", "Descargar bajar archivo", "Subir cargar archivo",
-            "Archivo documento datos", "Carpeta directorio archivos", "Documento texto información", "Presentación diapositivas exposición",
-            "Cálculo operaciones matemáticas", "Fórmula ecuación matemática", "Celda tabla hoja", "Fila horizontal tabla",
-            "Columna vertical tabla", "Tabla datos organizados", "Gráfico visual datos", "Diagrama esquema representación"
-        };
-        
-        // Pistas para Nivel 3 (8-9 letras)
-        pistas[2] = new String[] {
-            "Institución superior estudios", "Facultad departamento especialidad", "Profesión estudio título", "Asignatura tema aprender",
-            "Profesor docente enseñar", "Estudiante alumno aprender", "Exámenes pruebas evaluación", "Aprobar pasar satisfactorio",
-            "Suspender reprobar fracasar", "Notas calificaciones resultados", "Biblioteca libros préstamo", "Libros lectura conocimiento",
-            "Revistas publicación periódica", "Periódico diario noticias", "Lector persona lee", "Escritor autor textos",
-            "Novela narrativa extensa", "Poesía verso rima", "Cuento relato corto", "Historia pasado eventos",
-            "Deportista atleta competidor", "Entrenador prepara atletas", "Competir rivalidad ganar", "Campeón ganador primero",
-            "Récord mejor marca", "Medalla premio metal", "Trofeo copa premio", "Estadio instalación deportiva",
-            "Pista carrera atletismo", "Campo terreno deporte", "Vacaciones descanso viaje", "Viaje desplazamiento destino",
-            "Hotel alojamiento habitaciones", "Playa arena mar", "Montaña elevación terreno", "Bosque árboles naturaleza",
-            "Desierto arena seco", "Ciudad urbana edificios", "Pueblo pequeño rural", "Aldea casas pequeño",
-            "Restaurante comida servir", "Comensal cliente comer", "Menú platos opciones", "Plato comida preparada",
-            "Bebida líquido tomar", "Postre dulce final", "Cuenta factura pagar", "Propina agradecimiento servicio",
-            "Camarero mesero servir", "Cocinero chef preparar", "Ingeniería técnica diseño", "Arquitectura edificios diseño",
-            "Medicina ciencia salud", "Derecho leyes justicia", "Economía dinero recursos", "Psicología mente comportamiento",
-            "Filosofía pensamiento ideas", "Historia pasado humano", "Geografía tierra lugares", "Matemáticas números cálculos",
-            "Química elementos reacciones", "Física materia energía", "Biología seres vivos", "Geología rocas tierra",
-            "Astronomía estrellas espacio", "Informática computadoras datos", "Electrónica circuitos componentes", "Mecánica máquinas movimiento",
-            "Civil construcción edificios", "Industrial fábricas producción", "Laboratorio experimentos ciencia", "Experimento prueba hipótesis",
-            "Investigar estudiar profundamente", "Científico investigación ciencia", "Hipótesis suposición verificar", "Teoría explicación principios",
-            "Ley norma obligatoria", "Principio base fundamental", "Fórmula expresión matemática", "Ecuación igualdad matemática",
-            "Generación grupo misma época", "Evolución cambio desarrollo", "Desarrollo crecimiento avance", "Progreso mejora avance",
-            "Avance adelanto innovación", "Innovación novedad creación", "Tecnología aplicación ciencia", "Ciencia conocimiento sistemático",
-            "Descubrimiento hallazgo nuevo", "Invento creación nueva", "Comunicación información intercambio", "Información datos conocimiento",
-            "Mensaje comunicación texto", "Noticia información actual", "Reporte informe detallado", "Anuncio aviso publicidad",
-            "Publicidad promoción productos", "Mercadeo ventas estrategia", "Ventas comercializar productos", "Clientela compradores habituales"
-        };
+        int temp = 0;
+        for (int i = 0; i < posiciones.length; i++) {
+        	temp = posiciones[i];
+            comodines[i] = pistas[temp];
+		}
     }
     
+    public static void pistasFacilFase2(String [] comodines,int [] posiciones) {
+        // Pistas para Nivel 2 (7-8 letras)
+    	String[] pistas;
+        pistas = new String[] {
+            "Aparato imágenes noticias", "Medio comunicación sonido", "Dispositivo llamar hablar", "Dispositivo móvil portátil",
+            "Dispositivo pantalla táctil", "Ordenador plegable móvil", "Cuarto cocinar alimentos", "Habitación descanso cama",
+            "Cuarto aseo lavarse", "Sala reunir sentarse", "Lugar guardar automóvil", "Espacio exterior asiento",
+            "Saliente ventana exterior", "Cabina subir bajar", "Gradas peldaños subir", "Corredor conecta habitaciones",
+            "Centro médico enfermos", "Establecimiento medicinas", "Profesional salud curar", "Personal médico asistir",
+            "Ciencia curar enfermedades", "Obra cine actores", "Relato visual capítulos", "Persona interpreta personaje",
+            "Mujer interpreta personaje", "Responsable película guía", "Escrito historia diálogos", "Parte mínima película",
+            "Espectadores obra cine", "Lugar obra actuación", "Arte colores lienzo", "Arte lápiz papel",
+            "Rojo azul amarillo tonalidad", "Herramienta pintar cerdas", "Tela para pintar", "Lugar arte exposiciones",
+            "Recinto arte historia", "Creatividad expresión humana", "Creador obra estética", "Creación artística final",
+            "Establecimiento comprar vender", "Puestos productos variados", "Grandes estantes compra", "Lugar dinero cobrar",
+            "Comprador adquiere bienes", "Comerciante ofrece productos", "Valor numérico costo", "Tentación descuento costo",
+            "Adquirir productos pagar", "Ofrecer productos cobrar", "Máquina procesar datos", "Periférico papel documentos",
+            "Digitalizar imágenes papel", "Monitor pantalla grande", "Sistema videojuegos controles", "Mando para jugar",
+            "Dirección coche circular", "Pedal detener parar", "Pedal velocidad motor", "Máquina genera movimiento",
+            "Exterior chasis automóvil", "Goma circular rueda", "Líquido combustible motor", "Combustible pesado ruidoso",
+            "Energía corriente limpia", "Acumulador energía portátil", "Accesorio recargar energía", "Toma corriente pared",
+            "Flujo electrones cables", "Tensión fuerza eléctrica", "Escritura código instrucciones", "Pasos solución lógica",
+            "Espacio valor cambia", "Bloque cálculo resultado", "Molde objeto plantilla", "Instancia concreta datos",
+            "Acción función interna", "Instrucciones escritas programa", "Traducir código fuente", "Iniciar correr programa",
+            "Red mundial conexión", "Aplicación web páginas", "Sitio digital informativo", "Dirección salto URL",
+            "Localizar información respuesta", "Respuesta lista hallazgos", "Bajar archivos red", "Cargar archivos red",
+            "Contenedor digital datos", "Directorio agrupa archivos", "Texto digital información", "Láminas exposición visual",
+            "Operaciones lógicas números", "Igualdad lógica matemática", "Espacio tabla hoja", "Línea horizontal tabla",
+            "Eje vertical tabla", "Estructura datos organizados", "Imagen visual datos", "Esquema representación lógica"
+        };
+        int temp = 0;
+        for (int i = 0; i < posiciones.length; i++) {
+        	temp = posiciones[i];
+            comodines[i] = pistas[temp];
+		}
+    }
+    public static void pistasFacilFase3(String [] comodines,int [] posiciones) {
+        // Pistas para Nivel 3 (8-9 letras)
+    	String[] pistas;
+        pistas = new String[] {
+            "Institución superior estudios", "Departamento especialidad grado", "Camino estudio título", "Tema específico aprender",
+            "Docente guía enseñar", "Alumno joven aprender", "Pruebas evaluación conocimiento", "Superar filtro satisfactorio",
+            "Reprobar fracasar examen", "Calificaciones resultados finales", "Recinto textos préstamo", "Papeles lectura conocimiento",
+            "Publicación interés periódica", "Papel diario noticias", "Persona lee textos", "Autor textos literarios",
+            "Narrativa escrita extensa", "Género verso rima", "Relato ficción corto", "Sucesos pasado eventos",
+            "Atleta competidor físico", "Persona prepara atletas", "Rivalidad ganar trofeo", "Ganador puesto primero",
+            "Mejor marca histórica", "Premio metal cuello", "Copa estatuilla premio", "Recinto deportivo grande",
+            "Camino carrera atletismo", "Terreno césped deporte", "Días descanso viaje", "Desplazamiento destino nuevo",
+            "Alojamiento habitaciones pagado", "Zona arena mar", "Gran elevación terreno", "Zona árboles naturaleza",
+            "Zona arena seco", "Núcleo urbano edificios", "Asentamiento pequeño rural", "Casas pequeño rural",
+            "Lugar comida servir", "Persona cliente comer", "Lista platos opciones", "Alimento preparado servido",
+            "Líquido para tomar", "Final dulce comida", "Papel factura pagar", "Gratificación servicio voluntaria",
+            "Mesero servir mesas", "Chef preparar alimentos", "Técnica diseño aplicada", "Diseño edificios planos",
+            "Ciencia salud cuerpo", "Leyes justicia normas", "Gestión dinero recursos", "Estudio mente comportamiento",
+            "Pensamiento ideas profundas", "Sucesos pasado humano", "Ciencia tierra lugares", "Cálculos números ciencia",
+            "Ciencia elementos reacciones", "Ciencia materia energía", "Estudio seres vivos", "Estudio rocas tierra",
+            "Estudio estrellas espacio", "Ciencia computadoras datos", "Circuitos componentes energía", "Ciencia máquinas movimiento",
+            "Construcción estructuras edificios", "Fábricas producción masa", "Recinto experimentos ciencia", "Prueba verificación hipótesis",
+            "Estudiar profundamente verdad", "Persona investigación ciencia", "Suposición verificar científica", "Explicación principios aceptada",
+            "Norma obligatoria naturaleza", "Base fundamental inicio", "Expresión matemática cálculo", "Igualdad valores incógnita",
+            "Grupo nacidos época", "Cambio desarrollo especies", "Crecimiento avance complejidad", "Mejora avance positivo",
+            "Adelanto novedad técnica", "Novedad creación original", "Aplicación ciencia práctica", "Conocimiento sistemático método",
+            "Hallazgo algo nuevo", "Creación algo inexistente", "Intercambio información emisor", "Datos procesados conocimiento",
+            "Texto comunicación enviado", "Información evento actual", "Informe detallado datos", "Aviso promoción público",
+            "Promoción productos medios", "Estrategia ventas mercado", "Comercializar productos cambio", "Grupo compradores habituales"
+        };
+        int temp = 0;
+        for (int i = 0; i < posiciones.length; i++) {
+        	temp = posiciones[i];
+            comodines[i] = pistas[temp];
+		}
+    }
+
     // ==============================
     // PISTAS PARA NIVEL MEDIO
     // ==============================
     
-    public static void pistasmedio() {
+    public static void pistasMedioFase1(String [] comodines,int [] posiciones) {
         // Pistas para Nivel 1 (8-9 letras)
-    	String[][] pistas = new String [3][];
-        pistas[0] = new String[] {
-            "Programas computadora ejecutar", "Componentes físicos computadora", "Sistema conjunto organizado", "Programa instrucciones ejecutar",
-            "Interfaz usuario pantalla", "Plataforma base aplicaciones", "Servidor provee servicios", "Cliente consume servicios",
-            "Red conexión dispositivos", "Conexión enlace comunicación", "Datos información procesar", "Archivo documento almacenado",
-            "Carpeta contenedor archivos", "Disco almacenamiento datos", "Memoria almacenar temporal", "Proceso programa ejecución",
-            "Hilo ejecución paralela", "Puerto conexión entrada", "Protocolo reglas comunicación", "Paquete datos enviados",
-            "Encriptar codificar secreto", "Decodificar descifrar mensaje", "Comprimir reducir tamaño", "Descomprimir expandir tamaño",
-            "Formatear preparar disco", "Instalar poner programa", "Desinstalar quitar programa", "Actualizar mejorar versión",
-            "Parche corrección error", "Versión edición software", "Lenguaje comunicación código", "Sintaxis estructura código",
-            "Semántica significado código", "Variable cambia valor", "Constante fijo valor", "Operador acción cálculo",
-            "Expresión cálculo valor", "Sentencia instrucción completa", "Bucle repetición código", "Condición si entonces",
-            "Función subprograma retorna", "Procedimiento subprograma ejecuta", "Parámetro entrada función", "Argumento valor parámetro",
-            "Retorno resultado función", "Valor dato numérico", "Tipo clase datos", "Clase plantilla objetos",
-            "Objeto instancia datos", "Instancia creación objeto", "Materia sustancia física", "Energía capacidad trabajo",
-            "Partícula pequeña materia", "Átomo unidad básica", "Molécula átomos unidos", "Elemento sustancia pura",
-            "Compuesto elementos combinados", "Mezcla sustancias combinadas", "Solución líquido disuelto", "Reacción cambio químico",
-            "Gravedad fuerza atracción", "Fuerza empuje tracción", "Movimiento cambio posición", "Velocidad rapidez movimiento",
-            "Aceleración cambio velocidad", "Masa cantidad materia", "Peso fuerza gravedad", "Volumen espacio ocupa",
-            "Densidad masa volumen", "Presión fuerza área", "Temperatura calor frío", "Calor energía térmica",
-            "Frío baja temperatura", "Termómetro mide temperatura", "Barómetro presión aire", "Microscopio ver pequeño",
-            "Telescopio ver lejos", "Espectro colores luz", "Ondas vibración propagación", "Sonido oído vibración",
-            "Luz visible visión", "Color percepción visual", "Reflexión rebote luz", "Refracción desviación luz",
-            "Difracción dispersión ondas", "Interferencia ondas superponen", "Polarización luz dirección", "Lente vidrio aumenta",
-            "Espejo superficie refleja", "Prisma descompone luz", "Electrón partícula negativa", "Protón partícula positiva",
-            "Neutrón partícula neutra", "Núcleo centro átomo", "Órbita trayectoria electrón", "Nivel energía electrón",
-            "Estado sólido líquido", "Fase estado materia", "Gas fluido expande", "Líquido fluido volumen"
+    	String[] pistas;
+        pistas = new String[] {
+            "Parte lógica máquina", "Componentes físicos electrónicos", "Conjunto partes organizado", "Instrucciones ejecutar ordenador",
+            "Capa usuario pantalla", "Base ejecución aplicaciones", "Equipo provee servicios", "Entidad consume servicios",
+            "Conexión nodos dispositivos", "Enlace comunicación puntos", "Materia prima procesar", "Documento digital almacenado",
+            "Contenedor virtual archivos", "Soporte almacenamiento circular", "Almacenamiento datos temporal", "Tarea programa ejecución",
+            "Unidad ejecución paralela", "Punto conexión entrada", "Reglas estándar comunicación", "Unidad datos enviados",
+            "Codificar mensaje secreto", "Descifrar mensaje oculto", "Reducir tamaño bits", "Expandir tamaño original",
+            "Limpiar preparar soporte", "Colocar nuevo programa", "Quitar programa instalado", "Mejorar versión software",
+            "Corrección rápida error", "Edición específica software", "Idioma comunicación máquinas", "Reglas gramática código",
+            "Significado sentencias código", "Símbolo cambia valor", "Valor fijo invariable", "Símbolo acción cálculo",
+            "Cálculo valor final", "Orden completa ordenador", "Repetición código controlada", "Decisión lógica programa",
+            "Subprograma retorna valor", "Subprograma pasos ejecuta", "Dato entrada bloque", "Valor pasado parámetro",
+            "Salida resultado bloque", "Dato concreto numérico", "Categoría clase datos", "Plantilla creación objetos",
+            "Entidad concreta datos", "Creación única molde", "Sustancia física realidad", "Capacidad realizar trabajo",
+            "Mínima porción materia", "Unidad básica química", "Unión varios núcleos", "Sustancia pura tabla",
+            "Unión química elementos", "Sustancias juntas físicas", "Mezcla homogénea líquida", "Transformación molecular química",
+            "Fuerza atracción planetaria", "Empuje tracción física", "Variación posición tiempo", "Rapidez desplazamiento dirección",
+            "Variación rapidez tiempo", "Cantidad materia cuerpo", "Atracción masa tierra", "Espacio tridimensional ocupa",
+            "Relación masa volumen", "Fuerza unidad área", "Grado calor frío", "Energía flujo térmico",
+            "Baja sensación térmica", "Instrumento mide grados", "Instrumento presión atmosférica", "Lente ver diminuto",
+            "Instrumento ver astros", "Gama colores luz", "Vibración transporte energía", "Vibración aire oído",
+            "Energía electromagnética ojos", "Percepción visual matiz", "Rebote haz superficie", "Desviación haz medio",
+            "Dispersión ondas bordes", "Superposición ondas efectos", "Orientación ondas dirección", "Cristal aumenta imagen",
+            "Cristal refleja imagen", "Cristal divide luz", "Carga negativa átomo", "Carga positiva núcleo",
+            "Carga neutra núcleo", "Parte central átomo", "Camino electrones núcleo", "Capa energía electrones",
+            "Forma materia física", "Etapa agregación materia", "Fluido volátil expande", "Fluido volumen constante"
         };
-        
-        // Pistas para Nivel 2 (9-10 letras)
-        pistas[1] = new String[] {
-            "Algoritmo pasos solución", "Estructura organización datos", "Secuencia orden elementos", "Iteración repetición proceso",
-            "Recursión función misma", "Optimizar mejorar eficiencia", "Eficiencia recursos tiempo", "Complejidad dificultad problema",
-            "Análisis estudio detallado", "Diseño plan creación", "Implementar poner práctica", "Probar verificar funciona",
-            "Depurar corregir errores", "Error fallo código", "Excepción situación anormal", "Validar comprobar correcto",
-            "Verificar confirmar exacto", "Comprobar asegurar verdad", "Asegurar garantizar seguro", "Garantizar asegurar calidad",
-            "Documentar describir código", "Comentario explicación código", "Explicar aclarar entender", "Describir detallar características",
-            "Definir establecer significado", "Especificar detallar requisitos", "Requerir necesitar obligatorio", "Necesitar requerir indispensable",
-            "Requisito condición necesaria", "Condición requisito cumplir", "Variable cambia valor", "Constante fijo invariable",
-            "Arreglo lista elementos", "Matriz tabla bidimensional", "Vector dirección magnitud", "Lista colección elementos",
-            "Pila último primero", "Cola primero primero", "Árbol estructura ramificada", "Grafo nodos conexiones",
-            "Búsqueda encontrar elemento", "Ordenar organizar secuencia", "Clasificar agrupar similar", "Filtrar seleccionar criterio",
-            "Seleccionar escoger opción", "Insertar agregar elemento", "Eliminar quitar elemento", "Modificar cambiar elemento",
-            "Actualizar renovar datos", "Cambiar modificar diferente", "Base datos almacenamiento", "Datos información almacenada",
-            "Tabla datos organizados", "Registro fila datos", "Campo columna datos", "Columna vertical tabla",
-            "Fila horizontal tabla", "Clave identificador único", "Primaria clave principal", "Foránea clave referencia",
-            "Índice búsqueda rápida", "Consulta pregunta datos", "Selección filtrar datos", "Proyección columnas específicas",
-            "Unión combinar tablas", "Intersección común ambas", "Diferencia no común", "Producto combinación completa",
-            "Juntar unir tablas", "Donde condición filtro", "Agrupar juntar similar", "Ordenar organizar secuencia",
-            "Tener condición agrupación", "Distinto diferente único", "Agregado función grupo", "Contar número elementos",
-            "Suma total adición", "Promedio media valores", "Mínimo valor menor", "Máximo valor mayor",
-            "Transacción operación completa", "Comprometer confirmar cambios", "Revertir deshacer cambios", "Punto guardado marcador",
-            "Bloqueo acceso exclusivo", "Concurrencia simultáneo acceso", "Consistencia datos coherentes", "Aislamiento independencia transacciones",
-            "Durabilidad cambios permanentes", "Ácido propiedades transacciones", "Normalizar organizar datos", "Forma estructura organización",
-            "Normal estándar forma", "Denormalizar optimizar consultas", "Redundancia repetición datos", "Integridad datos correctos",
-            "Consistencia coherencia datos", "Seguridad protección acceso", "Auditoría revisión registros", "Respaldo copia seguridad"
-        };
-        
-        // Pistas para Nivel 3 (10-11 letras)
-        pistas[2] = new String[] {
-            "Protocolo reglas comunicación", "Ethernet cable red", "Enrutador direcciona paquetes", "Conmutador conecta dispositivos",
-            "Concentrador reparte señal", "Puente conecta redes", "Pasarela puente redes", "Cortafuegos seguridad red",
-            "Proxy intermediario red", "Intermediario agente medio", "DNS nombres direcciones", "DHCP direcciones automáticas",
-            "HTTP web páginas", "HTTPS web seguro", "FTP transferir archivos", "SMTP correo enviar",
-            "POP correo recibir", "IMAP correo servidor", "SSH conexión segura", "Telnet conexión remota",
-            "LAN red local", "WAN red amplia", "MAN red metropolitana", "VPN red privada",
-            "VLAN red virtual", "Wifi red inalámbrica", "Bluetooth corto alcance", "Infrarrojo luz invisible",
-            "Radiofrecuencia ondas radio", "Microonda onda corta", "Anchobanda capacidad transmisión", "Rendimiento eficiencia velocidad",
-            "Latencia retardo tiempo", "Variación fluctuación retardo", "Paquete datos enviados", "Datagrama paquete red",
-            "Segmento parte datos", "Encabezado información control", "Contenido datos útiles", "Sumacomprobación verificar integridad",
-            "Enrutamiento dirigir paquetes", "Reenvío pasar adelante", "Difusión enviar todos", "Multidifusión enviar grupo",
-            "Undifusión enviar uno", "Cualquierdifusión enviar cualquiera", "Bandaancha alta velocidad", "Banda frecuencia ancha",
-            "Ancha amplia capacidad", "Estrecha limitada capacidad", "Arquitectura diseño estructura", "Patrón solución común",
-            "Singleton única instancia", "Fábrica crear objetos", "Observador notificar cambios", "Estrategia algoritmo intercambiable",
-            "Adaptador convertir interfaz", "Decorador agregar funcionalidad", "Fachada interfaz simplificada", "Proxy representante objeto",
-            "Microservicio servicio pequeño", "Monolito aplicación única", "SOA servicios orientados", "ESB bus servicios",
-            "API interfaz programación", "REST estilo arquitectura", "SOAP protocolo mensajes", "GraphQL consulta datos",
-            "GRPC llamada remota", "Gancho enlace evento", "Contenedor empaquetar aplicación", "Docker plataforma contenedores",
-            "Kubernetes orquestar contenedores", "Orquestar coordinar servicios", "Escalar aumentar capacidad", "Replicar copiar instancias",
-            "Balancear distribuir carga", "Carga trabajo servidores", "Grupo conjunto nodos", "Nodo punto red",
-            "Continuo sin interrupción", "Integración combinar código", "Despliegue poner producción", "Entrega entregar producto",
-            "Tubería proceso automatizado", "Flujotrabajo secuencia pasos", "Automatizar hacer automático", "Guión script comandos",
-            "Configurar ajustar parámetros", "Desplegar implementar sistema", "Monitorear observar sistema", "Registro eventos sistema",
-            "Métrica medida rendimiento", "Alerta aviso problema", "Tablero panel indicadores", "Grafana visualizar métricas",
-            "Prometheus monitor sistema", "Elástico adaptable escala", "Kibana visualizar datos", "Logstash procesar logs"
-        };
+        int temp = 0;
+        for (int i = 0; i < posiciones.length; i++) {
+        	temp = posiciones[i];
+            comodines[i] = pistas[temp];
+		}
     }
-    
+    public static void pistasMedioFase2(String [] comodines,int [] posiciones) {
+        // Pistas para Nivel 2 (9-10 letras)
+    	String[] pistas;
+        pistas = new String[] {
+            "Serie pasos solución", "Organización interna datos", "Orden elementos sucesivo", "Repetición ciclo proceso",
+            "Llamada función misma", "Mejorar uso recursos", "Relación logro recursos", "Grado enredo problema",
+            "Estudio piezas detallado", "Plano previo creación", "Llevar práctica idea", "Testear funcionamiento real",
+            "Limpiar código fallos", "Acción inesperada fallo", "Anomalía lógica programa", "Asegurar dato correcto",
+            "Confirmar exactitud prueba", "Verificar certeza datos", "Garantizar estado seguro", "Asegurar calidad producto",
+            "Manual escrito código", "Nota aclaratoria código", "Aclarar concepto entender", "Pintar palabras rasgos",
+            "Fijar significado exacto", "Detallar requisitos precisión", "Solicitar condición obligatoria", "Tener falta algo",
+            "Condición obligatoria sistema", "Requisito cumplir lógico", "Nombre guarda valor", "Valor nunca cambia",
+            "Colección fija elementos", "Grilla bidimensional datos", "Magnitud dirección sentido", "Colección dinámica elementos",
+            "Estructura LIFO datos", "Estructura FIFO datos", "Nodos jerarquía ramas", "Red puntos aristas",
+            "Localizar elemento específico", "Secuenciar criterio lógico", "Agrupar tipos similares", "Tamizar bajo criterio",
+            "Elegir opción conjunto", "Añadir elemento nuevo", "Suprimir elemento existente", "Editar campos existentes",
+            "Renovar valores antiguos", "Hacer algo distinto", "Almacén masivo información", "Hechos procesados guardados",
+            "Estructura filas columnas", "Entrada única datos", "Atributo columna datos", "Eje vertical rejilla",
+            "Eje horizontal rejilla", "Identificador único acceso", "ID principal tabla", "ID referencia externa",
+            "Acceso rápido búsqueda", "Pregunta formal datos", "Filtrar filas específicas", "Elegir campos específicos",
+            "Combinar conjuntos resultados", "Elementos comunes conjuntos", "Elementos no comunes", "Combinación cartesiana completa",
+            "Vincular tablas relacionadas", "Cláusula filtro lógica", "Reunir rasgos similares", "Secuenciar resultados lista",
+            "Filtro grupos resultados", "Valor único diferente", "Cálculo resumen grupo", "Enumerar cantidad elementos",
+            "Adición total valores", "Punto medio valores", "Menor valor hallado", "Mayor valor hallado",
+            "Unidad trabajo atómica", "Fijar cambios disco", "Deshacer cambios temporales", "Hito volver atrás",
+            "Privar acceso compartido", "Acceso múltiples usuarios", "Datos coherentes lógicos", "Separación procesos simultáneos",
+            "Persistencia cambios tiempo", "Siglas transacciones seguras", "Estructurar evitar repetición", "Nivel organización datos",
+            "Estandarizado según reglas", "Romper estructura rendimiento", "Datos duplicados innecesarios", "Veracidad completitud datos",
+            "Estado lógico inalterado", "Protección intrusos datos", "Revisión historial acciones", "Copia seguridad externa"
+        };
+        int temp = 0;
+        for (int i = 0; i < posiciones.length; i++) {
+        	temp = posiciones[i];
+            comodines[i] = pistas[temp];
+		}
+    }
+    public static void pistasMedioFase3(String [] comodines,int [] posiciones) {
+        // Pistas para Nivel 3 (10-11 letras)
+    	String[] pistas;
+        pistas = new String[] {
+            "Reglas comunicación red", "Estándar cableado local", "Encaminador paquetes datos", "Conecta equipos local",
+            "Repetidor señal pasivo", "Vínculo segmentos red", "Pasarela acceso exterior", "Barrera defensa red",
+            "Intermediario peticiones web", "Persona medio gestión", "Nombres a IP", "Servidor IP dinámicas",
+            "Protocolo transferencia hipertexto", "Versión cifrada web", "Transferencia archivos protocolo", "Correo salida protocolo",
+            "Correo entrada local", "Correo entrada servidor", "Acceso remoto cifrado", "Acceso remoto plano",
+            "Red área local", "Red área extendida", "Red área ciudad", "Túnel privado internet",
+            "Segmento lógico LAN", "Conexión ondas radio", "Vínculo inalámbrico corto", "Luz frecuencia baja",
+            "Señales electromagnéticas aire", "Onda alta frecuencia", "Capacidad caudal datos", "Eficacia trabajo sistema",
+            "Retardo tiempo respuesta", "Fluctuación tiempo llegada", "Unidad mínima envío", "Unidad red independiente",
+            "Trozo datos transporte", "Datos control inicio", "Información útil interna", "Código error verificación",
+            "Elegir camino paquetes", "Pasar salto siguiente", "Mensaje todos nodos", "Mensaje grupo específico",
+            "Mensaje nodo único", "Mensaje nodo cercano", "Conexión mucha capacidad", "Rango frecuencias uso",
+            "Extensa capacidad flujo", "Pequeña capacidad flujo", "Esquema diseño lógico", "Solución reutilizable diseño",
+            "Instancia única global", "Clase creadora objetos", "Suscripción eventos cambios", "Algoritmo dinámico seleccionable",
+            "Conversor interfaces distintas", "Añadir capas objeto", "Simplificar acceso complejo", "Suplente acceso objeto",
+            "Módulo pequeño aislado", "Aplicación única grande", "Arquitectura servicios orquestados", "Bus comunicación mensajes",
+            "Interfaz servicios externa", "Estilo recursos URL", "Protocolo pesado XML", "Consultas datos precisas",
+            "Llamada remota binaria", "Punto captura eventos", "Aislamiento software ligero", "Plataforma contenedores famosa",
+            "Gestión flota contenedores", "Coordinar servicios juntos", "Crecimiento demanda recursos", "Copiar nodos iguales",
+            "Repartir trabajo servidores", "Peso tareas sistema", "Conjunto máquinas unidas", "Punto interconexión red",
+            "Flujo sin pausas", "Unir código ramas", "Poner producción sistema", "Dar producto final",
+            "Conducto automatizado tareas", "Pasos lógicos trabajo", "Eliminar intervención humana", "Archivo comandos órdenes",
+            "Ajustar opciones sistema", "Instalar sistema vivo", "Observar estado sistema", "Bitácora eventos guardados",
+            "Valor medida rendimiento", "Aviso ante fallo", "Panel control métricas", "Visualizador datos series",
+            "Recolector métricas sistema", "Capacidad ajuste escala", "Visualizador logs datos", "Ingesta procesado logs"
+        };
+        int temp = 0;
+        for (int i = 0; i < posiciones.length; i++) {
+        	temp = posiciones[i];
+            comodines[i] = pistas[temp];
+		}
+    }
+
     // ==============================
     // PISTAS PARA NIVEL DIFÍCIL
     // ==============================
     
-    public static void pistasdificil() {
+    public static void pistasDificilFase1(String [] comodines,int [] posiciones) {
         // Pistas para Nivel 1 (10-11 letras)
-    	String[][] pistas = new String [3][];
-        pistas[0] = new String[] {
-            "Capacidad resolver problemas", "Hecho humano no natural", "Proceso adquirir conocimiento", "Dispositivo automatizado tareas",
-            "Complejo profundo avanzado", "Red interconexión nodos", "Cerebro neuronas conexiones", "Neurona simple entrada",
-            "Múltiples capas procesamiento", "Propagar error atrás", "Convolucional filtros imágenes", "Recurrente memoria secuencias",
-            "Generativo crear nuevo", "Discriminativo distinguir clases", "Categorizar grupos clases", "Predecir valores continuos",
-            "Agrupar similaridades datos", "Relacionar elementos conexos", "Serie ordenada elementos", "Sucesión ordenada eventos",
-            "Mejorar maximizar minimizar", "Pendiente función cambio", "Descender mínimo función", "Aleatorio probabilístico proceso",
-            "Lote pequeño datos", "Época ciclo entrenamiento", "Repetición proceso bucle", "Acercarse límite valor",
-            "Alejarse divergir valores", "Sobreentrenar datos", "Regular evitar sobreajuste", "Desconectar neuronas aleatorio",
-            "Normalizar escalar datos", "Inicial valor inicio", "Inicialización He método", "Inicialización Xavier método",
-            "Función no linealidad", "RELU rectificada lineal", "Sigmoide forma S", "Tangente hiperbólica función",
-            "Medida desorden información", "Cruz entropía pérdida", "Pérdida error modelo", "Función matemática cálculo",
-            "Costo precio error", "Exactitud predicciones correctas", "Recordar positivos reales", "Medida F precisión recall",
-            "Matriz confusión tabla", "Confusión error clasificación", "Estadística datos análisis", "Probabilidad chance posibilidad",
-            "Distribución dispersión valores", "Normal campana Gauss", "Uniforme igual probabilidad", "Binomial éxitos fracasos",
-            "Poisson eventos raros", "Exponencial tiempo eventos", "Gaussiana distribución normal", "Laplace doble exponencial",
-            "Media promedio valores", "Mediana valor central", "Moda valor frecuente", "Varianza dispersión cuadrada",
-            "Desviación dispersión media", "Estándar desviación típica", "Covarianza relación variables", "Correlación dependencia variables",
-            "Regresión predecir valor", "Lineal recta relación", "Múltiple varias variables", "Logística probabilidad binaria",
-            "Polinomial curva relación", "Interpolación puntos intermedios", "Extrapolar fuera rango", "Intervalo rango valores",
-            "Confianza probabilidad cierto", "Significancia importancia resultado", "Hipótesis suposición probar", "Nula hipótesis cero",
-            "Alternativa opción principal", "P valor probabilidad resultado", "Alfa error tipo I", "Beta error tipo II",
-            "Potencia detectar efecto", "Prueba test estadístico", "Test examen evaluación", "Chi cuadrado distribución",
-            "ANOVA varianza análisis", "Mann Whitney no paramétrico", "Kruskal Wallis varios grupos", "Wilcoxon rangos pareados",
-            "Friedman bloques repetidos", "Shapiro Wilk normalidad", "Kolmogorov Smirnov distribución", "Anderson Darling ajuste",
-            "Lilliefors normalidad muestra", "Jarque Bera normalidad", "D'Agostino normalidad test"
+    	String[] pistas;
+        pistas = new String[] {
+            "Capacidad máquinas lógica", "Producto ingenio humano", "Adquirir conocimiento nuevo", "Máquina tareas autónomas",
+            "Nivel elevado dificultad", "Malla nodos unidos", "Centro control biológico", "Célula base pensamiento",
+            "Niveles ocultos proceso", "Error hacia atrás", "Filtros visión máquinas", "Memoria datos pasados",
+            "Capacidad crear contenido", "Separar tipos etiquetas", "Organizar grupos etiquetas", "Estimar valores numéricos",
+            "Reunir datos parecidos", "Vincular nodos red", "Sucesión datos tiempo", "Eventos uno tras otro",
+            "Buscar mejor valor", "Inclinación curva error", "Bajar hacia mínimo", "Azar procesos probables",
+            "Grupo pequeño entrenamiento", "Ciclo completo datos", "Volver hacer bucle", "Tender valor límite",
+            "Separarse valor esperado", "Aprender memoria ruido", "Evitar ajuste excesivo", "Apagar nodos azar",
+            "Escalar rango datos", "Punto arranque valores", "Método inicio pesos", "Técnica inicio gradiente",
+            "Cambio salida neurona", "Rectificada lineal activa", "Función curva logística", "Función rango -1 a 1",
+            "Grado caos sistema", "Pérdida error clasificación", "Fallo predicción real", "Cálculo relación números",
+            "Penalización error modelo", "Porcentaje aciertos totales", "Hallar positivos reales", "Equilibrio precisión sensibilidad",
+            "Tabla aciertos fallos", "Error asignar clase", "Ciencia análisis datos", "Cálculo opción ocurrir",
+            "Forma datos azar", "Curva campana conocida", "Igualdad azar todos", "Éxitos ensayos fijos",
+            "Eventos intervalo tiempo", "Caída tiempo sucesos", "Curva estándar probabilidad", "Doble caída exponencial",
+            "Punto central promedio", "Valor mitad lista", "Dato más repetido", "Dispersión datos cuadrado",
+            "Raíz dispersión datos", "Patrón medida común", "Relación mutua variables", "Grado unión variables",
+            "Ajustar línea puntos", "Relación proporcional recta", "Uso muchas variables", "Probabilidad clase binaria",
+            "Curva grados superiores", "Estimar entre puntos", "Estimar fuera límites", "Rango valores posibles",
+            "Seguridad valor real", "Importancia azar resultado", "Premisa probar científica", "Premisa ausencia efecto",
+            "Segunda opción hipótesis", "Probabilidad bajo nula", "Falso positivo error", "Falso negativo error",
+            "Capacidad hallar efecto", "Evaluación datos muestra", "Examen rigor científico", "Prueba independencia categorías",
+            "Comparar medias grupos", "Comparación no paramétrica", "Medias varios grupos", "Rangos grupos pareados",
+            "Bloques medidas repetidas", "Test forma normal", "Diferencia distribuciones test", "Ajuste colas datos",
+            "Normalidad muestras pequeñas", "Normalidad basada sesgo", "Normalidad distribución test"
         };
-        
+        int temp = 0;
+        for (int i = 0; i < posiciones.length; i++) {
+        	temp = posiciones[i];
+            comodines[i] = pistas[temp];
+		}
+    }
+    public static void pistasDificlFase2(String [] comodines,int [] posiciones) {
         // Pistas para Nivel 2 (11-12 letras)
-        pistas[1] = new String[] {
-            "Corazón enfermedades cardiovasculares", "Sistema nervioso cerebro", "Cáncer tumores malignos", "Niños pediatría infantil",
-            "Ancianos tercera edad", "Traumatismos accidentes lesiones", "Cirugía operación quirúrgica", "Huesos articulaciones sistema",
-            "Dientes boca odontología", "Boca dientes estomatología", "Ojos visión oftalmología", "Piel dermatología cutánea",
-            "Estómago intestinos digestivo", "Riñones nefrología renal", "Sistema urinario vejiga", "Mujeres ginecología femenino",
-            "Embarazo parto obstetricia", "Glándulas hormonas endocrino", "Sangre hematología glóbulos", "Sistema inmune defensas",
-            "Anestesia dolor cirugía", "Rayos X imágenes radiológicas", "Enfermedades tejidos patología", "Microbios bacterias pequeños",
-            "Parásitos organismos huésped", "Virus infecciones microscópicas", "Bacterias microorganismos unicelulares", "Hongos levaduras mohos",
-            "Protozoos organismos unicelulares", "Gusanos helmintos parásitos", "Medicamentos fármacos drogas", "Tóxicos venenos sustancias",
-            "Bioquímica química vida", "Funciones cuerpo vivo", "Anatomía estructura cuerpo", "Tejidos células histología",
-            "Embrión desarrollo fetal", "Genes herencia ADN", "Molecular moléculas biología", "Celular células unidad",
-            "Epidemiología enfermedades población", "Salud bienestar físico", "Pública salud comunidad", "Prevención evitar enfermedades",
-            "Promoción fomentar salud", "Rehabilitación recuperación función", "Fisioterapia terapia física", "Terapia tratamiento curación",
-            "Ocupacional trabajo actividades", "Logopedia habla lenguaje", "Constitución ley fundamental", "Administración estado gobierno",
-            "Penal delitos castigos", "Civil personas propiedades", "Mercantil comercio empresas", "Laboral trabajo empleados",
-            "Fiscal impuestos hacienda", "Tributario contribuciones estado", "Internacional países relaciones", "Público estado administración",
-            "Privado particulares empresas", "Procesal juicios procedimientos", "Contractual contratos acuerdos", "Extracontractual daños responsabilidad",
-            "Obligaciones deberes derechos", "Contratos acuerdo partes", "Sociedades empresas asociadas", "Asociaciones grupo personas",
-            "Fundaciones organización sin ánimo", "Cooperativas trabajo conjunto", "Propiedad posesión bienes", "Intelectual ideas creaciones",
-            "Industrial inventos marcas", "Autor creador obra", "Patente invención exclusiva", "Marca distintivo producto",
-            "Registro anotar oficialmente", "Derechos facultades legales", "Autorales creación literaria", "Reproducción copiar multiplicar",
-            "Distribución repartir productos", "Comunicación transmitir información", "Pública accesible todos", "Transformación modificar obra",
-            "Adaptación ajustar diferente", "Traducción idioma otro", "Cita referencia texto", "Parodia imitación burlesca",
-            "Caricatura exageración rasgos", "Pastiche mezcla estilos", "Arbitraje resolver disputas", "Mediación intermediario conflicto",
-            "Conciliación acuerdo partes", "Negociación diálogo acuerdo", "Litigio pleito judicial", "Juicio proceso judicial",
-            "Sentencia resolución juez", "Apelación recurrir decisión", "Casación anular sentencia", "Recurso solicitar revisión"
+    	String [] pistas;
+        pistas = new String[] {
+            "Estudio motor sangre", "Ciencia mente nervios", "Tumores masa maligna", "Salud pequeños humanos",
+            "Salud adultos mayores", "Golpes roturas cuerpo", "Intervención quirófano herida", "Estructura soporte cuerpo",
+            "Salud piezas bucales", "Estudio cavidad oral", "Ciencia órgano visión", "Estudio capa externa",
+            "Procesado alimentos cuerpo", "Filtros sangre cuerpo", "Vías salida líquidos", "Salud sistema femenino",
+            "Gestación nacimiento bebés", "Control químico hormonas", "Estudio fluido vital", "Defensas contra invasores",
+            "Dormir evitar dolor", "Radiografías placas huesos", "Estudio muestras tejidos", "Seres vivos diminutos",
+            "Vivir costa ajena", "Agentes infección celular", "Células sin núcleo", "Reino esporas moho",
+            "Unicelulares agua vida", "Lombrices parásitas largas", "Sustancias curar farmacia", "Sustancias dañinas veneno",
+            "Química procesos vivos", "Mecánica cuerpo vivo", "Forma interna cuerpo", "Microscopía capas células",
+            "Crecimiento antes nacer", "Código herencia ADN", "Estudio nivel átomos", "Unidad vida mínima",
+            "Rastreo brotes población", "Estado ausencia enfermedad", "Bienestar común sociedad", "Acción antes enfermar",
+            "Fomento hábitos sanos", "Recuperar movilidad perdida", "Tratamiento físico lesiones", "Curación métodos variados",
+            "Terapia entorno laboral", "Corrección vicios habla", "Carta magna nación", "Gestión entes públicos",
+            "Castigo actos ilegales", "Acuerdos particulares bienes", "Intercambio bienes lucro", "Relación jefe empleado",
+            "Pagos caja estado", "Aportes obligatorios tesoro", "Tratos entre naciones", "Relativo estado general",
+            "Relativo individuos solos", "Pasos juicio legal", "Acuerdos papel firmados", "Daño fuera contrato",
+            "Cargas frente derechos", "Pacto entre partes", "Entes comerciales unión", "Agrupación fines comunes",
+            "Entidad fines sociales", "Unión trabajo socios", "Tener algo propio", "Patrimonio ideas mente",
+            "Novedades técnicas marcas", "Persona madre obra", "Título invento nuevo", "Nombre distintivo venta",
+            "Inscripción archivos oficiales", "Poderes ordenamiento legal", "Relativos firma creador", "Hacer copias iguales",
+            "Poner alcance público", "Difusión datos ideas", "Abierto toda gente", "Cambio forma obra",
+            "Ajustar medio distinto", "Pasar texto idioma", "Mencionar fuente texto", "Burla estilo original",
+            "Dibujo rasgos exagerados", "Copia estilos variados", "Tercero decide disputa", "Tercero ayuda acuerdo",
+            "Punto unión partes", "Trato buscar acuerdo", "Pleito ante juez", "Veredicto final corte",
+            "Decisión escrita juez", "Pedir revisar fallo", "Anulación máxima instancia", "Medio impugnar decisión"
         };
-        
+        int temp = 0;
+        for (int i = 0; i < posiciones.length; i++) {
+        	temp = posiciones[i];
+            comodines[i] = pistas[temp];
+		}
+    }
+    public static void pistasDificilFase3(String [] comodines,int [] posiciones) {
         // Pistas para Nivel 3 (12-13 letras)
-        pistas[2] = new String[] {
-            "Teoría conocimiento verdad", "Estudio ser existencia", "Más allá física realidad", "Moral valores principios",
-            "Belleza arte percepción", "Razonamiento válido correcto", "Interpretación textos significado", "Estudio fenómenos conciencia",
-            "Existencia libertad angustia", "Estructuras sistemas relaciones", "Post estructuralismo crítico", "Descomponer analizar críticamente",
-            "Post moderno relativismo", "Crítica análisis evaluación", "Teoría explicación sistemática", "Social sociedad relaciones",
-            "Sociología estudio sociedad", "Antropología humano cultura", "Cultural costumbres tradiciones", "Física materia energía",
-            "Psicología mente conducta", "Cognitiva pensamiento memoria", "Conductual comportamiento observable", "Humanista persona potencial",
-            "Psicoanálisis inconsciente Freud", "Gestalt forma percepción", "Sistémica sistemas interacciones", "Transpersonal espiritual conciencia",
-            "Positiva felicidad bienestar", "Evolutiva desarrollo cambio", "Economía recursos escasos", "Política gobierno poder",
-            "Microeconomía individuos empresas", "Macroeconomía país total", "Desarrollo crecimiento económico", "Sustentable medio ambiente",
-            "Globalización mundial interdependencia", "Neoliberalismo mercado libre", "Keynesianismo intervención estado", "Marxismo lucha clases",
-            "Comunismo propiedad colectiva", "Socialismo medios producción", "Capitalismo propiedad privada", "Democracia pueblo gobierno",
-            "Autocracia poder absoluto", "Totalitarismo control total", "Autoritarismo obediencia autoridad", "Pluralismo diversidad ideas",
-            "Multiculturalismo varias culturas", "Interculturalidad diálogo culturas", "Nanotecnología átomos moléculas", "Biotecnología organismos vivos",
-            "Aeronáutica aviones vuelo", "Astronáutica espacio cohetes", "Robótica robots automatización", "Mecatrónica mecánica electrónica",
-            "Automatización procesos automáticos", "Instrumentación medir controlar", "Control regular sistema", "Procesos operaciones secuencia",
-            "Telemática telecomunicaciones informática", "Telecomunicación comunicación distancia", "Satelital satélites órbita", "Fibra óptica luz transmitir",
-            "Optoelectrónica luz electricidad", "Fotónica partículas luz", "Cuántica física partículas", "Computación procesar información",
-            "Información datos conocimiento", "Criptografía cifrar mensajes", "Hardware componentes físicos", "Descriptivo describir sistema",
-            "Verilog lenguaje descripción", "VHDL hardware descripción", "FPGA programable puertas", "ASIC circuito específico",
-            "Microprocesador CPU central", "Microcontrolador pequeño computador", "DSP procesamiento señal", "GPU gráficos procesamiento",
-            "Paralelismo simultáneo tareas", "Concurrencia acceso simultáneo", "Distribuido varios sistemas", "Escalable crecer capacidad",
-            "Resiliente recuperar fallos", "Tolerante aceptar errores", "Fallos averías errores", "Recuperación restaurar sistema",
-            "Desastre catástrofe emergencia", "Contingencia plan emergencia", "Sustentabilidad mantener recursos", "Medioambiente naturaleza entorno",
-            "Ecológico ambiente natural", "Renovable energía infinita", "Energía capacidad trabajo", "Solar sol radiación",
-            "Eólica viento molinos", "Hidráulica agua presa", "Geotérmica calor tierra", "Biomasa materia orgánica"
+    	String[] pistas;
+        pistas = new String[] {
+            "Origen saber verdad", "Pregunta por existencia", "Fundamentos realidad última", "Ciencia bien mal",
+            "Teoría juicio gusto", "Leyes pensar correcto", "Entender textos antiguos", "Estudio vivencia propia",
+            "Dilema ser nada", "Lógica partes unidas", "Crítica formas fijas", "Partir entender piezas",
+            "Época fin verdades", "Examen juicio ideas", "Conjunto ideas mundo", "Relativo gente grupo",
+            "Estudio grupos humanos", "Evolución hombre cultura", "Tradiciones grupo humano", "Leyes energía mundo",
+            "Procesos mente interna", "Procesos saber memoria", "Acción externa medida", "Enfoque valor humano",
+            "Diván mente oculta", "Ley cierre percepción", "Conjunto partes unidas", "Más allá ego",
+            "Ciencia vivir bien", "Fases cambio vida", "Ciencia bienes escasos", "Gestión poder estado",
+            "Trato agentes solos", "Trato nación entera", "Aumento riqueza país", "Equilibrio entorno futuro",
+            "Mundo unido redes", "Libertad total tratos", "Estado motor demanda", "Poder manos obreras",
+            "Todo de todos", "Bienes manos estado", "Dueño medios lucro", "Voto mando pueblo",
+            "Mando uno solo", "Dominio mente cuerpo", "Mando sin réplica", "Muchas ideas juntas",
+            "Respeto varios grupos", "Trato entre grupos", "Manejo nivel átomos", "Uso vida industria",
+            "Ingeniería naves aire", "Ingeniería naves espacio", "Máquinas tareas solas", "Mecánica mandos cables",
+            "Hacer solo máquinas", "Aparatos medir datos", "Dominio sistema orden", "Pasos ordenados fábrica",
+            "Redes datos distancia", "Enviar datos lejos", "Vía espacio orbital", "Hilos vidrio luz",
+            "Luz señales eléctricas", "Ciencia luz láser", "Partículas nivel mínimo", "Máquina procesar bits",
+            "Datos ordenados saber", "Ocultar mensajes clave", "Piezas tacto máquina", "Narrar rasgos sistema",
+            "Código diseña chips", "Código diseña circuitos", "Chip puertas abiertas", "Chip funciones fijas",
+            "Cerebro placa base", "Chip todo incluido", "Procesador audio voz", "Procesador video juegos",
+            "Tareas muchas tiempo", "Acceso varios puntos", "Repartido varios nodos", "Crecer según demanda",
+            "Aguante ante fallos", "Permite errores leves", "Errores roturas bugs", "Volver punto sano",
+            "Gran daño sistema", "Plan caso error", "Cuidado recursos hoy", "Naturaleza aire tierra",
+            "Amigo mundo sano", "Fuente nunca acaba", "Capacidad hacer algo", "Luz calor estrella",
+            "Fuerza aire palas", "Fuerza agua caída", "Calor centro tierra", "Restos plantas energía"
         };
+        int temp = 0;
+        for (int i = 0; i < posiciones.length; i++) {
+        	temp = posiciones[i];
+            comodines[i] = pistas[temp];
+		}
     }
 }
