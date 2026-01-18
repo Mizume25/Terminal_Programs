@@ -1,6 +1,6 @@
 package crucigrama;
 
-
+//PRUEBAS Y TEST DE METODOS
 import java.util.Scanner;
 import crucigrama.metodos.*;
 public class CrossWordGame {
@@ -54,28 +54,40 @@ public class CrossWordGame {
 * - Nivel Dificl: 10 vidas => Pistas a cambio de 2 vidas
 * Palabras: 13 | 12 | 11 palabras
 * */
-
+	
+	
 	public static void main(String[] args) {
 	
+	
+	
+	
+	
 		
-	String [] cadenas = new String[13];
-	int [] posiciones = new int[13];
+		
+	
+	String [] cadenas = new String[15];
+	int [] posiciones = new int[15];
 	char [][] caracteres = new char[cadenas.length][];
 	Palabras.niveldificilFase3(cadenas,posiciones);
 	boolean n = Comprobaciones.valoresRepetidos(cadenas);
 	if (n) {
 		ArrayLib.mostrarArray(cadenas);
-		Comprobaciones.nuevoValor(4, cadenas);
+		Comprobaciones.nuevoValor(8, cadenas);
 		System.out.println("Hubo valores repetidos");
 	}
 	
-	
+	int [] suma = new int [cadenas.length];
 	Comprobaciones.medidaCadena(cadenas,caracteres);
 	
 	
 	Comprobaciones.llenarLetras(cadenas, caracteres);
 	
+	Matriceslib.sumaFilasMatriz(suma, caracteres, 0);
 	
+	
+	ArrayLib.mostrarArray(suma);
+	System.out.println();
+	System.out.println();
 	ArrayLib.mostrarArray(cadenas);
 	System.out.println();
 	for (int i = 0; i < caracteres.length; i++) {

@@ -455,6 +455,16 @@ public class Matriceslib {
         }
     }
     
+    public static void sumaFilasMatriz(int[] sumaFila, char [][] tabla, int col) {
+        for (int fila = 0; fila < tabla.length; fila++) {
+            sumaFila[fila] = 0;
+            
+            for (int columna = col; columna < tabla[fila].length; columna++) {
+                sumaFila[fila]++;
+            }
+        }
+    }
+    
 	// MÉTODO: SUMA FILAS DESDE LA COLUMNA DESEADA
     // PARÁMETROS: 1 array int, 1 matriz int, int columna
     public static int sumaFilaMatriz( int[][] tabla, int fil) {
