@@ -59,29 +59,31 @@ public class CrossWordGame {
 	public static void main(String[] args) {
 	
 	
-	
-	
-	
-		
-		
-	
 	String [] cadenas = new String[15];
 	int [] posiciones = new int[15];
 	char [][] caracteres = new char[cadenas.length][];
 	Palabras.niveldificilFase3(cadenas,posiciones);
 	boolean n = Comprobaciones.valoresRepetidos(cadenas);
 	if (n) {
-		ArrayLib.mostrarArray(cadenas);
+		
 		Comprobaciones.nuevoValor(8, cadenas);
 		System.out.println("Hubo valores repetidos");
 	}
 	
-	int [] suma = new int [cadenas.length];
+	
 	Comprobaciones.medidaCadena(cadenas,caracteres);
 	
 	
 	Comprobaciones.llenarLetras(cadenas, caracteres);
 	
+	for (int i = 0; i < caracteres.length; i++) {
+		for (int j = 0; j < caracteres[i].length; j++) {
+			System.out.print(caracteres[i][j]);
+		}
+		System.out.println();
+	}
+	
+	/*
 	Matriceslib.sumaFilasMatriz(suma, caracteres, 0);
 	
 	
@@ -96,7 +98,7 @@ public class CrossWordGame {
 		}
 		System.out.println();
 	}
-	/*
+	
 	String [][] palabras = new String[9][2];
 	
 	String [] comodines = new String[9];
@@ -115,7 +117,7 @@ public class CrossWordGame {
 	}
 	
 	
-	Enunciados.enunciados(palabras);
+	Enunciados.enun2ciados(palabras);
 	
 	
 	System.out.println();
